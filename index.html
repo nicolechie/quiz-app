@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href='https://fonts.googleapis.com/css?family=Bangers|Happy+Monkey' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<title>Quiz App</title>
+</head>
+<body>
+<div class='gradeDivOverlay' id = "gradeDivOverlay">
+  				</div>
+	<div class = "container position" id = 'startPageDiv'>
+		<div class="row">
+  			<div class="col-md-6 col-md-offset-3 center">
+  			<h1>Quiz App</h1>
+  			<p>This is a Quiz App. Test your knowledge.</p>
+				<button class="btn btn-default" id = 'startGameButton' value = 'start' type="button">Start Quiz</button>
+			</div>
+		</div>
+	</div>
+  				<h2 class='onTop text-center' id = 'answerCorrect'>Correct!</h2>
+  					<h2 class='onTop text-center' id = 'answerWrong'>Wrong!</h2>
+  					<div id = 'finalScoreDiv' class = 'onTop text-center'>
+  						<h2 id = 'finalScoreHeader'>
+  						</h2>
+  						<button class="btn btn-default" id = 'tryAgainButton' value = 'start' type="button">Try Again</button>
+  					</div>
+	<div class = "container topMargin">
+
+		<div class="row">
+  			<div class="col-md-6 col-md-offset-3">
+  				<div id = 'questionOneDiv'>
+  				<h3 id = 'countDisplayHeader'></h3>
+  				<h2 id = 'questionHeader'>Which button is blue?</h2>
+				<button id = 'blue' value = 'blue' type="button" class="btn btn-primary btn-lg btn-block">Blue</button>
+				<button id = 'green' value = 'green' type="button" class="btn btn-success btn-lg btn-block">Green</button>
+				<button id = 'red' value = 'red' type="button" class="btn btn-danger btn-lg btn-block">Red</button>
+				<button id = 'orange' value = 'orange' type="button" class="btn btn-warning btn-lg btn-block">Orange</button>
+			</div>
+			</div>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

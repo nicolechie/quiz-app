@@ -1,0 +1,45 @@
+ body {
+ 	background-color: #333 !important;
+ 	color: white !important;
+ 	width: 100%;
+ 	height: 100%;
+ }
+#gradeDivOverlay, #answerCorrect, #answerWrong, #questionOneDiv, #finalScoreDiv {
+ 	display: none;
+ }
+.center {
+ 	text-align: center;
+ }
+.position {
+ 	padding: 4em;
+ 	height: 300px;
+ }
+ .onTop {
+ 	top: 115px;
+ 	height: 100%;
+ 	width: 100%;
+ 	z-index: 99;
+ 	position: absolute;
+ }
+ .gradeDivOverlay {
+ 	background-color: #333;
+ 	opacity: .8;
+ 	padding-top: 90px;
+ 	height: 100%;
+ 	width: 100%;
+ 	z-index: 1;
+ /*	margin-left: -5px;*/
+ 	position: absolute;
+ }
+ .topMargin {
+ 	margin-top: 5rem;
+ }
+ #countDisplayHeader {
+ 	text-align: right;
+ 	display: block;
+ 	clear: none;
+
+ }
+ /*.questionOneDiv {
+ 	opacity: .5;
+ }
