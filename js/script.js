@@ -33,15 +33,6 @@ var count = 0;
 		questionOne.show();
 		displayQuestionNumber();
 	}
-	// function answerFeedback(e){
-	// 	console.log('You clicked the ' + $(this).attr("value") + ' button');
-	// 	if ($(this).attr("value") === "blue") {
-	// 		console.log('Correct!');
-	// 	}
-	// 	else {
-	// 		console.log('Wrong!');
-	// 	}
-	// }
 	function answerFeedback(e){
 		gradeOverlay.show();
 		if ($(this).attr("value") === questions[count].answer) {
@@ -66,7 +57,7 @@ var count = 0;
 			getFinalScore();
 			console.log(finalScore);
 			gradeOverlay.show();
-			finalScoreDisplay.text(finalScore + ' of ' + questions.length)
+			finalScoreDisplay.text('Score: ' + finalScore + ' of ' + questions.length)
 			finalScoreBox.show();
 		}
 	}
@@ -86,13 +77,5 @@ var count = 0;
 		gradeOverlay.hide();
 		finalScoreBox.hide();
 		questionHeader.text(questions[count].text);	
-
 	}
-	// var finalScore = userGrades.reduce(add, 0);
-
-	// function add(a,b) {
-	// 	return a+b;
-	// }
-
-
 });

@@ -38,8 +38,25 @@
  	text-align: right;
  	display: block;
  	clear: none;
+ }
+ .vertical-align {
+  position: relative;
+  top: 50%;
+  	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+}
+section {
+  display: block;
+  margin: 0 auto 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+nav {
+	padding: 3rem;
+}
 
- }
- /*.questionOneDiv {
- 	opacity: .5;
- }
