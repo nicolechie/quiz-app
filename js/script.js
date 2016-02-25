@@ -1,4 +1,4 @@
-$(document).ready(function(){ 
+	$(document).ready(function(){ 
 var startPage = $('#startPageDiv');
 var startButton = $('#startGameButton');
 var blueButton = $('#blue').click(answerFeedback);
@@ -13,11 +13,11 @@ var countDisplay = $('#countDisplayHeader');
 var finalScoreDisplay = $('#finalScoreHeader');
 var tryAgain = $('#tryAgainButton');
 var finalScoreBox = $('#finalScoreDiv');
-var questions = [{text:'Which color is blue?', answer:'blue'}, 
-				{text:'Which color is green?', answer:'green'},
-				{text:'Which color is red?', answer:'red'},
-				{text:'Which color is orange?', answer:'orange'},
-				{text:'What color is the sky?', answer:'blue'}];
+var questions = [{text:'Which of the following is NOT a codename for a prior version of Mac OS X?', buttonOne: 'Puma', buttonTwo: 'Jaguar', buttonThree: 'Bobcat', buttonFour: 'Kodiak', answer:'red'},
+                 {text:'Which of the following was the first Legend of Zelda game to be released for Nintendo 64?', buttonOne: 'Majoras Mask', buttonTwo: 'Ocarina of Time', buttonThree: 'A Link to the Past', buttonFour: 'The Adventure of Link', answer:'green'},
+				{text:'The Bootstrap web development framework was originally developed by employees of which social networking company?',  buttonOne: 'Facebook', buttonTwo: 'Twitter', buttonThree: 'Instagram', buttonFour: 'LinkedIn', answer:'green'},
+				{text:'At what age does the Star Wars character, Yoda, die?', buttonOne: '1000', buttonTwo: '500', buttonThree: '800', buttonFour: '900', answer:'orange'},
+				{text:'What does HTTP stand for?', buttonOne: 'Hypertext Transfer Protocol', buttonTwo: 'Highspeed Text Transfer Permission', buttonThree: 'Hypermedia Transfer Protocol', buttonFour: 'Hypertext Transient Protocol', answer:'blue'}];
 var questionHeader = $('#questionHeader');
 var userGrades = [];
 var finalScore = 0;
@@ -50,7 +50,8 @@ var count = 0;
 		wrong.hide();
 		if ((count+1) < questions.length) {
 			count++;
-			questionHeader.text(questions[count].text);	
+			questionHeader.text(questions[count].text);
+      getButtons();
 			displayQuestionNumber();
 		}
 		else {
@@ -76,6 +77,13 @@ var count = 0;
 		finalScore = 0;
 		gradeOverlay.hide();
 		finalScoreBox.hide();
-		questionHeader.text(questions[count].text);	
+		questionHeader.text(questions[count].text);
+    getButtons();
 	}
+  function getButtons() {
+    $('#blue').text(questions[count].buttonOne);
+    $('#green').text(questions[count].buttonTwo);
+    $('#red').text(questions[count].buttonThree);
+    $('#orange').text(questions[count].buttonFour);
+    }
 });
